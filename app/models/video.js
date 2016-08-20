@@ -15,5 +15,7 @@ export default DS.Model.extend({
       return '';
     }
     return 'background-image: url('+this.get('picture')+')';
-  })
+  }),
+  tags: DS.attr(),
+  playlists: DS.attr()
 });

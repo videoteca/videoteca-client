@@ -1,1 +1,19 @@
-video.hbs
+<div class="row">
+<div class="col col-sm-12">
+  {{app-video-full record=record}}
+</div>
+
+<div class="col col-sm-6">
+  <h2>Comentários e discussão</h2>
+</div>
+<div class="col col-sm-6">
+  <h2>Vídeos relacionados</h2>
+  <div class="row">
+    {{#each model.relatedVideos as |record|}}
+    <div class="col col-lg-6 col-md-10 col-sm-10 col-xs-12">
+      {{app-video-teaser record=record}}
+    </div>
+    {{/each}}
+  </div>
+</div>
+</div>

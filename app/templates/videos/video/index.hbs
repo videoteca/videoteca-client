@@ -1,0 +1,32 @@
+<div class="row">
+<div class="col col-sm-6">
+  <h2>Comentários e discussão</h2>
+
+</div>
+
+<div class="col col-sm-6">
+  <h2>Vídeos relacionados</h2>
+  <div class="row">
+    {{#each model.relatedVideos as |record|}}
+    <div class="col col-lg-6 col-md-10 col-sm-10 col-xs-12">
+      <div class="video-teaser">
+        <figure>
+          <img class="video-picture" src="{{record.picture}}">
+        </figure>
+        <div class="video-data">
+          <div class="video-location">
+            <i class="glyphicon glyphicon-map-marker"></i>
+            {{record.location}}
+          </div>
+          <h3 class="video-title">{{record.title}}</h3>
+          <p class="video-description">{{record.description}}</p>
+        </div>
+        <div class="video-info">
+          <span class="data">19 AGO <b>09:21</b></span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+</div>
