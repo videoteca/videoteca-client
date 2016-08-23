@@ -17,5 +17,5 @@ export default DS.Model.extend({
     return 'background-image: url('+this.get('picture')+')';
   }),
   tags: DS.attr(),
-  playlists: DS.attr()
+  playlists: DS.hasMany('playlist')
 });
